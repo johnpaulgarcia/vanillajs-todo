@@ -39,7 +39,7 @@ We are going to be creating a todo list. So the easiest way to store a list of t
 const list = [];
 ```
 
-Listo will be our main array for storing tasks.
+list will be our main array for storing tasks.
 
 Now, we don't want to just store strings. Instead, we will store Task objects into our array. Because our users are going to be making a lot of Tasks we should perhaps streamline the object creating process with a **constructor**
 
@@ -110,14 +110,14 @@ function addTask(task) {
 
 Now our code will only run if 'task' is "truthy". Empty tasks are not truthy since they're just empty strings.
 
-Next, we want to call our task constructor and fill it with the new task, then we will push the new task to listo, and save it.
+Next, we want to call our task constructor and fill it with the new task, then we will push the new task to list, and save it.
 
 *app.js*
 ```javascript
 function addTask(task) {
   if(task) {
     task = new Task(task);
-    listo.push(task);
+    list.push(task);
   }
 };
 ```
